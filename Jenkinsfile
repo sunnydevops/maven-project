@@ -6,7 +6,7 @@ node{
     }
 
     stage('Build & Package'){
-        sh label: '', script: 'mvn clean package'
+        tool name: 'maven', type: 'maven'
     }
 
     stage('artifactory'){
