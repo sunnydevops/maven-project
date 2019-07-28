@@ -11,10 +11,8 @@ node{
     }
 
     stage('artifactory'){
-        archiveArtifacts 'gameoflife-web/target/gameoflife.war'
+        archiveArtifacts 'Gameoflife-pipeline/webapp/target/webapp.war'
     }
 
-    stage('Junit'){
-        junit 'gameoflife-web/target/surefire-reports/*.xml'
-    }
+    
 }
